@@ -1,0 +1,12 @@
+First, we need to install Parameterized Trigger Plugin 
+
+Once this plugin is installed , go to Job 1(upstream job) > Post-Build Actions > Select ”Trigger parameterized build on other projects”
+
+Then we will choose the options from the GUI plugin.
+
+After that, we need to send the ‘Build_Number’ of this job to the next. So we will assign it to a variable ‘Temp’.
+
+The complete list of Jenkins Environment Variables are seen here.
+
+In the Downstream Job: To access this parameter we must define our passed parameter (Temp in the example) as a parameterized build parameter in the 
+downstream job before the parameter will be passed.
